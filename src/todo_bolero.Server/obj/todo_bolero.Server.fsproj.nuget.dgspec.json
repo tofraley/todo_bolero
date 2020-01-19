@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/taylor/projects/todo-bolero/src/todo_bolero.Server/todo_bolero.Server.fsproj": {}
+  },
+  "projects": {
+    "/home/taylor/projects/todo-bolero/src/todo_bolero.Client/todo_bolero.Client.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/taylor/projects/todo-bolero/src/todo_bolero.Client/todo_bolero.Client.fsproj",
+        "projectName": "todo_bolero.Client",
+        "projectPath": "/home/taylor/projects/todo-bolero/src/todo_bolero.Client/todo_bolero.Client.fsproj",
+        "packagesPath": "/home/taylor/.nuget/packages/",
+        "outputPath": "/home/taylor/projects/todo-bolero/src/todo_bolero.Client/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/taylor/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Bolero": {
+              "target": "Package",
+              "version": "[0.11.18-preview31, )"
+            },
+            "Bolero.Build": {
+              "target": "Package",
+              "version": "[0.11.18-preview31, )"
+            },
+            "Bolero.HotReload": {
+              "target": "Package",
+              "version": "[0.11.4-preview31, )"
+            },
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Microsoft.AspNetCore.Blazor.Build": {
+              "target": "Package",
+              "version": "[3.1.0-preview4.19579.2, )"
+            },
+            "Microsoft.AspNetCore.Blazor.DevServer": {
+              "target": "Package",
+              "version": "[3.1.0-preview4.19579.2, )"
+            },
+            "Microsoft.AspNetCore.Components": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.Http.Connections.Common": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client.Core": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    },
+    "/home/taylor/projects/todo-bolero/src/todo_bolero.Server/todo_bolero.Server.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/taylor/projects/todo-bolero/src/todo_bolero.Server/todo_bolero.Server.fsproj",
+        "projectName": "todo_bolero.Server",
+        "projectPath": "/home/taylor/projects/todo-bolero/src/todo_bolero.Server/todo_bolero.Server.fsproj",
+        "packagesPath": "/home/taylor/.nuget/packages/",
+        "outputPath": "/home/taylor/projects/todo-bolero/src/todo_bolero.Server/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/taylor/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "/home/taylor/projects/todo-bolero/src/todo_bolero.Client/todo_bolero.Client.fsproj": {
+                "projectPath": "/home/taylor/projects/todo-bolero/src/todo_bolero.Client/todo_bolero.Client.fsproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Bolero.HotReload.Server": {
+              "target": "Package",
+              "version": "[0.11.4-preview31, )"
+            },
+            "Bolero.Server": {
+              "target": "Package",
+              "version": "[0.11.18-preview31, )"
+            },
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "Microsoft.AspNetCore.Blazor.Server": {
+              "target": "Package",
+              "version": "[3.1.0-preview4.19579.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-x64",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+﻿<linker>
+  <assembly fullname="todo_bolero.Client">
+    <type fullname="*" required="true" />
+  </assembly>
+</linker>
