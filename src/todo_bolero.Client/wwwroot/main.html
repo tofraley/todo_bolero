@@ -1,3 +1,12 @@
 <div>
-  ${Name}
+  <div id="container">
+    <h1>${ListName}</h1>
+    ${Entries}
+    <template id="Entry">
+      <div class="card" id="${Id}">${Value}
+        <button onclick="${RemoveEntry}">x</button>
+      </div>
+    </template>
+    <button class="addbtn" onclick="${AddEntry}">+</button>
+  </div>
 </div>

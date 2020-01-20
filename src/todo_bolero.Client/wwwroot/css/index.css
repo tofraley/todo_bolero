@@ -38,3 +38,23 @@ body {
   margin-right: auto;
   margin-bottom: 5px;
 }
+
+#container {
+  max-width: 300px;
+  text-align: center;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border: solid black;
+  border-radius: 10px;
+}
+
+.addbtn {
+  width: 90%;
+  min-height: 30px;
+  padding: 10px;
+  border-radius:  10px;
+  box-sizing: border-box;
+}

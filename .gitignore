@@ -2,4 +2,4 @@ src/todo_bolero.Client/bin/*
 src/todo_bolero.Server/bin/*
 src/todo_bolero.Client/obj/*
 src/todo_bolero.Server/obj/*
-.ionide/symbolCache.db
+.ionide/*
