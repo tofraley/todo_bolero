@@ -1,12 +1,7 @@
 module todo_bolero.Client.Main
 
-open System
 open Elmish
 open Bolero
-open Bolero.Html
-open Bolero.Json
-open Bolero.Remoting
-open Bolero.Remoting.Client
 open Bolero.Templating.Client
 
 /// Routing endpoints definition.
