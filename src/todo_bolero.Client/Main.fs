@@ -1,5 +1,6 @@
 module todo_bolero.Client.Main
 
+open System
 open Elmish
 open Bolero
 open Bolero.Html
@@ -12,7 +13,7 @@ type Page =
 /// The Elmish application's model.
 type Entry = 
   {
-    Id: int
+    Id: Guid
     Value: string
   }
 
@@ -29,15 +30,15 @@ let initModel =
         Name = "test list"
         Entries = [
           { 
-            Id = 0
+            Id = Guid.NewGuid()
             Value = "first"
           }
           {
-            Id = 1
+            Id = Guid.NewGuid()
             Value = "second"
           }
           {
-            Id = 2
+            Id = Guid.NewGuid()
             Value = "third"
           }
         ]
@@ -47,8 +48,8 @@ let initModel =
 type Message =
     | SetPage of Page
     | SetName of string
-    | AddEntry
-    | RemoveEntry of int
+    | AddEntry of string
+    | RemoveEntry of Guid
 
 let update message model =
    match message with
@@ -56,12 +57,12 @@ let update message model =
         { model with Page = page }
     | SetName str ->
         { model with Name = str }
-    | AddEntry ->
+    | AddEntry str ->
         { model with Entries = 
                      model.Entries @ 
                       [{
-                        Id = model.Entries.Length
-                        Value = "another item!" 
+                        Id = Guid.NewGuid()
+                        Value = str
                       }] }
     | RemoveEntry id -> 
         { model with Entries =
@@ -83,7 +84,7 @@ let view (model:Model) dispatch =
     Main()
       .ListName(model.Name)
       .Entries(forEach model.Entries <| fun e -> showEntry dispatch e)
-      .AddEntry(fun _ -> dispatch AddEntry)
+      .AddEntry("", fun str -> dispatch (AddEntry str))
       .Elt()
 
 type MyApp() =
@@ -92,6 +93,4 @@ type MyApp() =
     override this.Program =
         Program.mkSimple (fun _ -> initModel) update view
         |> Program.withRouter router
-#if DEBUG
         |> Program.withHotReload
-#endif

@@ -41,7 +41,16 @@ body {
 
 #container {
   max-width: 300px;
-  text-align: center;
+}
+
+h1 {
+  margin-left: 20px;
+}
+
+input {
+  margin-left: 20px;
+  width: 80%;
+  min-height: 30px;
 }
 
 .card {
@@ -57,4 +66,8 @@ body {
   padding: 10px;
   border-radius:  10px;
   box-sizing: border-box;
+}
+
+.cardbtn {
+  float: right;
 }

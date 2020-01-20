@@ -4,9 +4,10 @@
     ${Entries}
     <template id="Entry">
       <div class="card" id="${Id}">${Value}
-        <button onclick="${RemoveEntry}">x</button>
+        <button class="cardbtn" onclick="${RemoveEntry}">x</button>
       </div>
     </template>
-    <button class="addbtn" onclick="${AddEntry}">+</button>
+    <input type="text" bind-onchange="${AddEntry}">
+
   </div>
 </div>
